@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-from .v1.users import router
+from api.endpoints.v1.users import router
 
 api_router = APIRouter()
 

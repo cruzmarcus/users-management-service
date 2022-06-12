@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     API_ROOT_PATH: str = ''
     API_TITLE: str = "Users management service API"
     API_VERSION: str = "1.0.0"
-    DATABASE_URL: str = "mysql://root@localhost:3306/test"
+    DATABASE_URL: str = "mysql://root@localhost:3306/users"
 
     class Config:
         env_file = '.env'

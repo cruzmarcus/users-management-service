@@ -1,12 +1,16 @@
 FROM python:3.10-buster
 
 COPY src /app
-COPY pyproject.toml /app
+COPY pyproject.toml poetry.lock /app/
 
 WORKDIR /app
 
 RUN curl -sSL https://install.python-poetry.org | python3 -
-RUN poetry config virtualenvs.create false
+
+ENV PATH="$PATH:/root/.local/bin"
+
 RUN poetry install --no-dev
 
-CMD uvicorn api.main:app --reload
+EXPOSE 8000
+
+CMD poetry run uvicorn api.main:app --host 0.0.0.0 --reload

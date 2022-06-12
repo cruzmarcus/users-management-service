@@ -1,0 +1,18 @@
+
+version: "2.1"
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    links:
+      - database
+
+  database:
+    image: mysql:8
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: users
+      MYSQL_ROOT_PASSWORD: root
