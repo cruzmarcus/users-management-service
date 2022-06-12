@@ -1,5 +1,10 @@
 
 poetry_install:
+    curl -sSL https://install.python-poetry.org | python3 - && \
+    export PATH="$PATH:/root/.local/bin" && \
+    poetry config virtualenvs.in-project true && \
+    poetry install
+
 
 
 create-dev-env:

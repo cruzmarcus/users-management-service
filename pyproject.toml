@@ -5,9 +5,10 @@ description = ""
 authors = ["Marcus Vinicius Silva Cruz <marcus.v.s.c13@gmail.com>"]
 
 [tool.poetry.dependencies]
+cryptography = "*"
 fastapi = "*"
-jose = "*"
-python = "^3.8"
+fastapi-pagination = "*"
+python = "^3.7"
 pydantic = "*"
 sqlalchemy = "*"
 uvicorn = "*"

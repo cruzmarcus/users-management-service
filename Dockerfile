@@ -1,9 +1,9 @@
 FROM python:3.10-buster
 
-COPY src /app
-COPY pyproject.toml poetry.lock /app/
+COPY src /
+COPY pyproject.toml poetry.lock /
 
-WORKDIR /app
+WORKDIR /src
 
 RUN curl -sSL https://install.python-poetry.org | python3 -
 
