@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from src.api.endpoints.router import api_router
+from api.endpoints.router import api_router
 import config
 
 settings = config.get_settings()

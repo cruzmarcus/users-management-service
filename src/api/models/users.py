@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 from sqlalchemy import Column, Integer, String, Table
 
-from src.database.database import metadata, engine
+from database.database import metadata, engine
 
 
 @dataclass

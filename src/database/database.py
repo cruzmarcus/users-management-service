@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine, MetaData
 
-from src import config
+import config
 
 settings = config.get_settings()
 
