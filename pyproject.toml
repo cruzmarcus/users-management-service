@@ -1,0 +1,70 @@
+[tool.poetry]
+name = "users-management-service"
+version = "0.1.0"
+description = ""
+authors = ["Marcus Vinicius Silva Cruz <marcus.v.s.c13@gmail.com>"]
+
+[tool.poetry.dependencies]
+fastapi = "*"
+jose = "*"
+python = "^3.8"
+pydantic = "*"
+sqlalchemy = "*"
+uvicorn = "*"
+
+
+[tool.poetry.dev-dependencies]
+black = "*"
+isort = "*"
+requests = "*"
+pytest = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+skip-string-normalization = true
+exclude = '''
+/(
+      \.eggs
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | \.nox
+    | \.tox
+    | \.venv
+    | \.svn
+    | _build
+    | buck-out
+    | build
+    | dist
+    | .*venv.*
+)/
+'''
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+allow_redefinition = false
+check_untyped_defs = true
+disallow_untyped_defs = true
+ignore_errors = false
+ignore_missing_imports = true
+local_partial_types = true
+no_implicit_optional = true
+pretty = true
+python_version = 3.8
+show_error_codes = true
+strict_optional = true
+strict_equality = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
+warn_unreachable = true
+warn_no_return = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
