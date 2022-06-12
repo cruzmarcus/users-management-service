@@ -10,6 +10,7 @@ class User(BaseModel):
     cpf: str
     birth_date: str
     email: str
+    photo: str
 
     class Config:
         orm_mode = True
